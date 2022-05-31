@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+body {
+    background-color:#000033;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 90vw;
+}
+#container {
+    width: 20px;
+    padding: 9px 8px 20px 8px;
+    margin: 10px auto;
+    background-color:black;
+    border-radius: 20px;
+    border-color:seagreen;
+}
+input {
+    border-radius:3px;
+}
+    </style>
+        <title>Kalkulator</title>
+        <script>
+        function del(){
+    var x=droid.display.value;
+    droid.display.value=x.substring(0,x.length-1);
+}
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset id="container">
+                <form name="droid">
+                    
+                    <input id="display" type="text" name="display" readonly>             
+       <table border=2>
+       <tr>           
+       <td>
+                    <input type="button" value="(" style="background:white;" onclick="droid.display.value += '('"> <input type="button" value=")" style="background:white;" onclick="droid.display.value += ')'">
+                    <input type="button" value="del" onclick="del()" style="background:red;">     
+                    <input type="button" value="/" style="background:blue;" onclick="droid.display.value += ' / '">               <br>       
+                    <input  type="button" value="7" style="background:white;" onclick="droid.display.value += '7'">
+                    <input type="button" value="8" style="background:white;" onclick="droid.display.value += '8'">
+                    <input type="button" value="9" style="background:white;" onclick="droid.display.value += '9'">
+                    <input type="button" value="+" style="background:blue;" onclick="droid.display.value += ' + '">
+                    <br>
+                    <label>
+                    <input type="button" value="4" style="background:white;" onclick="droid.display.value += '4'">
+                    <input type="button" value="5" style="background:white;" onclick="droid.display.value += '5'">
+                    <input type="button" value="6" style="background:white;" onclick="droid.display.value += '6'">
+                    <input type="button" value="-" style="background:blue;" onclick="droid.display.value += ' - '">
+                    <br>
+                    <input type="button" value="1" style="background:white;" onclick="droid.display.value += '1'">
+                    <input type="button" value="2" style="background:white;" onclick="droid.display.value += '2'">
+                    <input type="button" value="3" style="background:white;" onclick="droid.display.value += '3'">
+                    <input type="button" value="x" style="background:blue;" onclick="droid.display.value += ' * '">
+                    <br>
+                    <input type="button" value="Clear" style="background:green;" onclick="droid.display.value = ''">
+                    <input type="button" value="0" style="background:white;" onclick="droid.display.value += '0'">
+                   <input type="button" value="=" style="background:yellow;" onclick="droid.display.value = eval(droid.display.value)">
+                     </form>
+            </fieldset>
+        </div>
+    </body>
+    
+</html>
